@@ -1,0 +1,30 @@
+{
+  "servers": {
+    "atlassian-mcp-server": {
+            "url": "https://mcp.atlassian.com/v1/sse",
+            "type": "http"
+        },
+    "Framelink Figma MCP": {
+      "command": "npx",
+      "args": ["-y", "figma-developer-mcp", "--figma-api-key=figd_LTQRCgmyWXuJyUTmKlOE3sWHnQ91GdpcQ11x36Jx", "--stdio"]
+    },
+    // "zephyr-server": {
+    //   "command": "npx",
+    //   "args": ["zephyr-scale-mcp-server@latest"],
+    //   "env": {
+    //     "ZEPHYR_API_KEY": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjb250ZXh0Ijp7ImJhc2VVcmwiOiJodHRwczovL3Bha25hcmF0aGlwLmF0bGFzc2lhbi5uZXQiLCJ1c2VyIjp7ImFjY291bnRJZCI6IjYwZTlhYTYxNGVlMWJlMDA3MTZkMDUwOCIsInRva2VuSWQiOiJlYjZjYTRjMy0zNGY1LTQyNjEtYTAxOC1kMWMyMGVjZDg1NTAifX0sImlzcyI6ImNvbS5rYW5vYWgudGVzdC1tYW5hZ2VyIiwic3ViIjoiNmI4MTc0MmMtNTAzYy0zZTI1LWFiNGYtYTcyMjM0OWYyNzliIiwiZXhwIjoxNzg5MjAyMzk4LCJpYXQiOjE3NTc2NjYzOTh9.HWdwTT-Y7UtnbzLnYKDbNzxMIIWuXMe16zm4-YAjZDY",
+    //     "ZEPHYR_BASE_URL": "https://paknarathip.atlassian.net"
+    //   }
+    // },
+    "jira-zephyr": {
+      "command": "node",
+      "args": ["/Users/pokpak/repository/ghcp/workshop-ep4/01_setup_zephyr_mcp/zephyr-mcp-module/dist/index.js"],
+      "env": {
+        "JIRA_BASE_URL": "https://paknarathip.atlassian.net",
+        "JIRA_USERNAME": "pak.narathip@gmail.com",
+        "JIRA_API_TOKEN": "ATATT3xFfGF0VkUotulXJNFFXakodnFtFD7iR79ggfNyej3cyYDSFzi7exhj1LK_w7V34AUkYPBqVyn2ayAtjsiFVUtTbqDP78mRrkGrhwlpyPMipAlYihfrMx6teRA8udrHZzSVR9wIXsz_E0qmaEgPv7sUTMPPXu3laktqPqqQs1zBAvoCs1c=E80DFC32",
+        "ZEPHYR_API_TOKEN": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjb250ZXh0Ijp7ImJhc2VVcmwiOiJodHRwczovL3Bha25hcmF0aGlwLmF0bGFzc2lhbi5uZXQiLCJ1c2VyIjp7ImFjY291bnRJZCI6IjYwZTlhYTYxNGVlMWJlMDA3MTZkMDUwOCIsInRva2VuSWQiOiJlYjZjYTRjMy0zNGY1LTQyNjEtYTAxOC1kMWMyMGVjZDg1NTAifX0sImlzcyI6ImNvbS5rYW5vYWgudGVzdC1tYW5hZ2VyIiwic3ViIjoiNmI4MTc0MmMtNTAzYy0zZTI1LWFiNGYtYTcyMjM0OWYyNzliIiwiZXhwIjoxNzg5MjAyMzk4LCJpYXQiOjE3NTc2NjYzOTh9.HWdwTT-Y7UtnbzLnYKDbNzxMIIWuXMe16zm4-YAjZDY"
+      }
+    }
+  }
+}
