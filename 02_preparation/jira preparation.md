@@ -1,3 +1,32 @@
+# Copilot Instructions: UI Dashboard (Figma 12-488)
+
+## Objective
+- สร้างหรือพัฒนา UI Dashboard ตามสเปกที่อ้างอิงจาก Figma node 12-488 และ Confluence page
+
+## Reference
+- Figma: https://www.figma.com/design/pkCT6YDfcnEVOOTS2HIDOg/POC-FIGMA-MCP?node-id=12-488&t=jeTsk8zEsa7Vkwp7-4
+- Confluence: [UI Dashboard Spec (Figma 12-488)](https://paknarathip.atlassian.net/wiki/spaces/SD/pages/1179677/UI+Dashboard+Spec+Figma+12-488)
+
+## Feature Details
+- แสดงข้อมูล Emission Factors ในรูปแบบ Table (ID, Name, Category, Value, Unit, Source, Last Updated, Status, Usage, Actions)
+- มีเมนูนำทาง (Dashboard, Emission Factors, Data Query, Currency, Account Management, Notifications, Settings)
+- ปุ่ม Import, Export, Save changes, Logout
+- ระบบ Tab และ Pagination
+- ช่องค้นหาและ Combobox สำหรับกรองข้อมูล
+
+## Flow การใช้งาน
+1. ผู้ใช้เข้าสู่หน้า Dashboard จะเห็นเมนูนำทางด้านซ้ายและข้อมูล Emission Factors ตรงกลาง
+2. สามารถค้นหา/กรองข้อมูล Emission Factors ได้
+3. สามารถ Import/Export ข้อมูล หรือ Save changes ได้
+4. เปลี่ยน Tab เพื่อดูข้อมูลหรือจัดการ Source อื่น ๆ
+5. มี Pagination สำหรับเปลี่ยนหน้าข้อมูล
+
+## Validation/เงื่อนไข
+- Table ต้องแสดงข้อมูลถูกต้อง
+- ปุ่มและ Action ต้องตอบสนองต่อการคลิก
+- รองรับการค้นหา/กรอง, Import/Export, Tab, Pagination
+
+
 ### [NEW] Story: ตาราง Emission Factors
 **ชื่อ Story:** แสดงตาราง Emission Factors ใน Dashboard
 **user story:**
@@ -138,18 +167,30 @@
 
 ---
 
-### ECS-61: Pagination ในตาราง Emission Factors
+
+### ECS-61: สร้างตาราง Emission Factors ใน Dashboard
 **user story:**
-- ในฐานะผู้ใช้งานระบบ ฉันต้องการดูข้อมูล Emission Factors แบบแบ่งหน้า (Pagination) เพื่อให้ดูข้อมูลจำนวนมากได้สะดวก
+- ในฐานะผู้ใช้งาน ฉันต้องการเห็นข้อมูล Emission Factors ในรูปแบบตาราง เพื่อที่ฉันจะได้ดูรายละเอียดและเปรียบเทียบข้อมูลได้ง่าย
 
 **Acceptance Criteria:**
-| Given | When | Then |
-| --- | --- | --- |
-| ข้อมูลมีมากกว่า 1 หน้า | ผู้ใช้คลิกเปลี่ยนหน้า | ตารางแสดงข้อมูลหน้าที่เลือก |
+- ตารางต้องแสดงข้อมูล Emission Factors (ID, Name, Category, Value, Unit, Source, Last Updated, Status, Usage, Actions) ครบถ้วน
+- ตารางต้องรองรับการแสดงผลข้อมูลจำนวนมาก (scroll/pagination)
+- ตารางต้องสามารถ sort ข้อมูลแต่ละ column ได้
+- ตารางต้องรองรับ responsive (desktop/mobile)
+- ตารางต้องแสดงข้อความ "ไม่พบข้อมูล" เมื่อไม่มีข้อมูล
 
-**Priority:** Medium
-**Story Points:** 1
-**Notes:** ต้องแสดงจำนวนหน้าทั้งหมดและหน้าปัจจุบัน
+| Given | When | Then |
+|-------|------|------|
+| มีข้อมูล Emission Factors | ผู้ใช้เปิดหน้า Dashboard | ตารางแสดงข้อมูลครบถ้วน |
+| ไม่มีข้อมูล | ผู้ใช้เปิดหน้า Dashboard | ตารางแสดงข้อความ "ไม่พบข้อมูล" |
+| ข้อมูลเกิน 1 หน้า | ผู้ใช้ scroll หรือเปลี่ยนหน้า | ตารางแสดงข้อมูลหน้าที่เลือก |
+| ผู้ใช้คลิกหัว column |  | ตาราง sort ตาม column ที่เลือก |
+
+**Priority:** High
+**Story Points:** 3
+**Notes:**
+- ต้องแสดงผลข้อมูลถูกต้องตาม Figma node 12-488
+- รองรับการใช้งานทั้ง desktop และ mobile
 
 #### Subtasks:
 - ออกแบบ UI (ECS-74)
@@ -163,3 +204,4 @@
 - Confluence: [ใส่ลิงก์ Confluence ที่เกี่ยวข้อง]
 - Zephyr: [ใส่ลิงก์ Zephyr Test Case ที่เกี่ยวข้อง]
 
+ตอนสร้าง story สร้างให้ครบทุกอันด้วย

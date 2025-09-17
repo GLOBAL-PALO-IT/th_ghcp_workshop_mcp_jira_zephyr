@@ -50,4 +50,3 @@
 4. Import or link these test cases into Zephyr for execution and tracking.
 
 > Tip: Use clear acceptance criteria in Jira/Confluence to help Copilot generate more relevant test cases.
-

@@ -49,6 +49,8 @@
 10. when link ref to zephyr use this link format: [jira_username]/projects/[project_name]?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page#!/v2/testCase/[zephyr_test_case_key]
 11. if you have anything to do, do it all, review it carefully.
 12. the result should give me the full detail of the task to create in jira and the test case to create in zephyr as above format. also the links to see the details in jira and zephyr.
+13 specify the word to confirm clearly with bold "ยืนยัน"
+14 dont forget to back to update **Test Details:** from jira after create test case in zephyr to make [clickable link to Zephyr] works.
 
 > Tip: Use clear acceptance criteria in Jira/Confluence to help Copilot generate more relevant test cases.
 
