@@ -10,7 +10,7 @@
     },
     "jira-zephyr": {
       "command": "node",
-      "args": ["/Users/pokpak/repository/ghcp/ktb w2/th_ghcp_workshop_mcp_jira_zephyr/01_setup_zephyr_mcp/zephyr-mcp-module/dist/index.js"],
+      "args": ["<path-to-your-jira-zephyr-mcp>/dist/index.js"],
       "env": {
         "JIRA_BASE_URL": "<your-jira-base-url>",
         "JIRA_USERNAME": "<your-jira-username>",
