@@ -10,7 +10,7 @@
     },
     "jira-zephyr": {
       "command": "node",
-      "args": ["<path-to-your-jira-zephyr-mcp>/dist/index.js"],
+      "args": ["<path-to-your-jira-zephyr-mcp>/01_setup_zephyr_mcp/dist/index.js"],
       "env": {
         "JIRA_BASE_URL": "<your-jira-base-url>",
         "JIRA_USERNAME": "<your-jira-username>",
